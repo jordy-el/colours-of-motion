@@ -25,7 +25,7 @@ puts "\n"
 if choice[0] == 'y'
   #
   # Should turn mp4 into separate keyframes and store them in a buffer
-  video_progress_bar = ProgressBar.create(format: "%t: |%B| %p%%", title: "Processing video", total: 100)
+  video_progress_bar = ProgressBar.create(format: "%t: |%B| %P%%", title: "Processing video", total: 100)
   video.transcode("buffer/%10d.jpg", %w(-vf select='eq(pict_type\,I)' -vsync vfr), validate: false) do |progress|
     video_progress_bar.progress =  (progress * 100)
   end
@@ -33,7 +33,7 @@ if choice[0] == 'y'
 
   #
   # Should resize picture to single pixel of average colour in frame
-  average_progress_bar = ProgressBar.create(format: "%t: |%B| %p%%", title: "Getting averages", total: image_buffer.length)
+  average_progress_bar = ProgressBar.create(format: "%t: |%B| %P%%", title: "Getting averages", total: image_buffer.length)
   image_buffer.each do |file|
     MiniMagick::Tool::Convert.new do |convert|
       convert << file
