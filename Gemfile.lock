@@ -1,0 +1,17 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    mini_magick (4.7.0)
+    multi_json (1.12.1)
+    streamio-ffmpeg (3.0.2)
+      multi_json (~> 1.8)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  mini_magick
+  streamio-ffmpeg
+
+BUNDLED WITH
+   1.14.6
