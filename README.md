@@ -1,6 +1,6 @@
 # Colours of Motion
 
-> Make a panorama of colours used in a Movie
+> Make a panorama of colours from a movie
 
 This ruby script takes a movie file as an
 input, processes the frames, and turns the
@@ -10,8 +10,10 @@ panorama.
 Output file is placed in same folder as input
 and has the same name with '.jpg' appended.
 
-To install, run `bundle install` inside the
-project folder.
+To run, you must have ffmpeg and imagemagick.
+
+Once those are installed, run `bundle install`
+inside the project folder.
 
 Example: `ruby app.rb ~/Desktop/Paper_Towns.mkv`
 ![Colours of Paper Towns](https://github.com/jordy-el/colours-of-motion/blob/master/example/Paper_Towns.mkv.jpg)
